@@ -9,8 +9,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                env.TEST_JSON = '5678'
-                echo "test is ${TEST_JSON}"
                 sh 'python3 -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
