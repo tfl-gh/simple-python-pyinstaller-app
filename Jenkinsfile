@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install pytest'
+                sh 'sudo apt-get install python3-pytest'
                 sh 'python3 -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
